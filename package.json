@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-starter-lil-learning-gatsby",
+  "private": true,
+  "description": "An opinionated starter for Gatsby",
+  "version": "0.1.0",
+  "author": "Morten Rand-Hendriksen, LinkedIn Learning",
+  "license": "LinkedIn Learning Exercise Files License Agreement",
+  "dependencies": {
+    "gatsby": "^2.19.45",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "2.0.4"
+  },
+  "keywords": [
+    "gatsby, linkedin learning, lil"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LinkedInLearning/learning-gatsby-2833047"
+  },
+  "bugs": {
+    "url": "https://github.com/LinkedInLearning/learning-gatsby-2833047/issues"
+  }
+}
