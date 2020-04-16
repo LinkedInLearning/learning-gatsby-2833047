@@ -1,7 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course [COURSENAME]. The full course is available from [LinkedIn Learning](LICOURSEURL).
-
-[![COURSENAME](COURSEIMAGE)](LICOURSEURL)
+# Learning Gatsby
+This is the repository for the LinkedIn Learning course Learning Gatsby. The full course is available from [LinkedIn Learning](LICOURSEURL).
 
 [COURSEDESCRIPTION]
 
@@ -14,6 +12,7 @@ Some branches will have a beginning and an end state. These are marked with the 
 
 ## Installing
 1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
+	- [Node.js](https://nodejs.org/en/)
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+3. In terminal, navigate to the project folder and run the command `npm install`.
+4. To start developing, run the command `gatsby develop`.
