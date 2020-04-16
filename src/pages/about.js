@@ -16,14 +16,6 @@ const AboutPage = () => {
       />
       <section>
         <h1>About this site</h1>
-        <figure>
-          <img
-            src="/images/bubbles-callout.png"
-            width="480"
-            height="440"
-            alt="Bubbles the Robot"
-          />
-        </figure>
         <div>
           <p>This is the first page I've created using Gatsby!</p>
           <p>
