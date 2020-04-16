@@ -15,13 +15,17 @@ const IndexPage = () => {
         // article
       />
       <section>
-        <h1>This is where the front page content will eventually go.</h1>
-        <div><p>This file, index.js, functions as the homepage for the site.</p>
-        <p>It can be populated with pure HTML like this, and extended using all available Gatsby and React components.</p></div>
+        <h1>This is the new title for the page.</h1>
+        <div>
+          <p>This file, index.js, functions as the homepage for the site.</p>
+          <p>
+            It can be populated with pure HTML like this, and extended using all
+            available Gatsby and React components.
+          </p>
+        </div>
       </section>
     </Layout>
   )
 }
-
 
 export default IndexPage

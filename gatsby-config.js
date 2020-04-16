@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Opinionated Starter`,
+    title: `My First Gatsby Site!`,
     titleTemplate: `%s · a starting point`,
     author: {
       name: `Morten Rand-Hendriksen`,
@@ -17,7 +17,5 @@ module.exports = {
     logo: `static/logo.png`,
     twitter: `mor10`,
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-  ],
+  plugins: [`gatsby-plugin-react-helmet`],
 }
