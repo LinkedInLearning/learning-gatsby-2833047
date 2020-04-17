@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RobotImage from "../components/robotimage"
+import style from "./events.module.css"
 
 const AboutPage = () => {
   return (
@@ -15,8 +16,8 @@ const AboutPage = () => {
         // Boolean indicating whether this is an article:
         // article
       />
-      <section>
-        <h1>About this site</h1>
+      <section className={style.wrapper}>
+        <h1 className={style.heading}>About this site</h1>
         <RobotImage
           src={"/images/bubbles-callout.png"}
           alt={"Bubbles the Robot"}
