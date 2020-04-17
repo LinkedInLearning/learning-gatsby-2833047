@@ -1,11 +1,12 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RobotImage from "../components/robotimage"
 import style from "./events.module.css"
 
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO
@@ -17,6 +18,7 @@ const AboutPage = () => {
         // article
       />
       <section className={style.wrapper}>
+        <Img fluid={data.headerImage.childImageSharp.fluid} alt="Robots" />
         <h1 className={style.heading}>About this site</h1>
         <RobotImage
           src={"/images/bubbles-callout.png"}
