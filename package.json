@@ -7,8 +7,10 @@
   "license": "LinkedIn Learning Exercise Files License Agreement",
   "dependencies": {
     "gatsby": "^2.19.45",
+    "gatsby-plugin-css-customs": "^0.4.0",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-postcss": "^2.2.2",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-source-filesystem": "^2.2.2",
     "prop-types": "^15.7.2",

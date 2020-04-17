@@ -17,5 +17,9 @@ module.exports = {
     logo: `static/logo.png`,
     twitter: `mor10`,
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-css-customs`,
+  ],
 }
