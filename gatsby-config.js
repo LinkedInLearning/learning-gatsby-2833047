@@ -16,6 +16,20 @@ module.exports = {
     url: `https://something.or.other`,
     logo: `static/logo.png`,
     twitter: `mor10`,
+    menuLinks: [
+      {
+        name: `Home`,
+        link: `/`,
+      },
+      {
+        name: `About`,
+        link: `/about`,
+      },
+      {
+        name: `Events`,
+        link: `/events`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
