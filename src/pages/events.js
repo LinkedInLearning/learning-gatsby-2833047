@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Event from "../components/event"
 import style from "./events.module.css"
 
 const IndexPage = ({ data }) => {
@@ -21,12 +22,25 @@ const IndexPage = ({ data }) => {
         <Img fluid={data.headerImage.childImageSharp.fluid} alt="Robots" />
         <h1 className={style.heading}>Events</h1>
         <div>
-          <Img
-            className={style.image}
-            fixed={data.bodyImage.childImageSharp.fixed}
-            alt="Robots"
-          />
           <p>We attend and present at many events. Come join us!</p>
+        </div>
+      </section>
+      <section className={style.events}>
+        <div className={style.eventList}>
+          <h2 className={style.eventHeading}>Future events</h2>
+          <ul className={style.events__list}>
+            {data.futureEvents.nodes.map(event => (
+              <Event key={event.id} event={event} />
+            ))}
+          </ul>
+        </div>
+        <div className={style.eventList}>
+          <h2 className={style.eventHeading}>Past events</h2>
+          <ul className={style.events__list}>
+            {data.pastEvents.nodes.map(event => (
+              <Event key={event.id} event={event} />
+            ))}
+          </ul>
         </div>
       </section>
     </Layout>
@@ -46,11 +60,30 @@ export const query = graphql`
         }
       }
     }
-    bodyImage: file(relativePath: { eq: "bubbles-disc.png" }) {
-      childImageSharp {
-        fixed(width: 288, grayscale: true) {
-          ...GatsbyImageSharpFixed
-        }
+    futureEvents: allEvent(
+      filter: { collection: { eq: "future" } }
+      sort: { fields: startDate, order: ASC }
+    ) {
+      nodes {
+        id
+        name
+        startDate
+        endDate
+        location
+        url
+      }
+    }
+    pastEvents: allEvent(
+      filter: { collection: { eq: "past" } }
+      sort: { fields: startDate, order: ASC }
+    ) {
+      nodes {
+        id
+        name
+        startDate
+        endDate
+        location
+        url
       }
     }
   }

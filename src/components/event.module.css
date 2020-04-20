@@ -1,0 +1,17 @@
+.event {
+  padding-top: 1rem;
+}
+
+.event a {
+  color: inherit;
+}
+
+.event__title {
+  font-size: 110%;
+  font-weight: 500;
+}
+
+.event__meta {
+  font-family: var(--highlight-font);
+  font-size: 80%;
+}
