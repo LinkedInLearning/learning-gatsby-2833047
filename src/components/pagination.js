@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import style from "./pagenav.module.css"
+import style from "./pagination.module.css"
 
 const Pagination = ({ pageContext }) => {
   const { previousPagePath, nextPagePath } = pageContext

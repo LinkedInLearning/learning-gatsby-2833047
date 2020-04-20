@@ -6,6 +6,7 @@
 const path = require(`path`)
 const _ = require(`lodash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { paginate } = require(`gatsby-awesome-pagination`)
 
 /**
  * Events
@@ -96,5 +97,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         slug: post.node.fields.slug,
       },
     })
+  })
+
+  // Create your paginated pages
+  paginate({
+    createPage, // The Gatsby `createPage` function
+    items: posts, // An array of objects
+    itemsPerPage: 2, // How many items you want per page
+    pathPrefix: "/articles", // Creates pages like `/blog`, `/blog/2`, etc
+    component: path.resolve(`./src/templates/articles.js`), // Just like `createPage()`
   })
 }

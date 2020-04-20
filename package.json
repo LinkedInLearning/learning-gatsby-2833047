@@ -8,6 +8,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.45",
+    "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-css-customs": "^0.4.0",
     "gatsby-plugin-manifest": "^2.3.3",
