@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const path = require(`path`)
+const _ = require(`lodash`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 /**
  * Events
@@ -50,7 +53,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     actions.createNodeField({
       node,
       name: `slug`,
-      value: `/${collection}${slug}`,
+      value: `/articles${slug}`,
     })
   }
 }
@@ -70,7 +73,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             fields {
               slug
-              collection
             }
           }
         }
@@ -84,10 +86,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Generate single post pages
   const posts = queryResult.data.postQuery.edges
-  posts.forEach((post, index) => {
+  posts.forEach(post => {
     createPage({
       path: post.node.fields.slug,
       component: path.resolve(`./src/templates/article.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: post.node.fields.slug,
+      },
     })
   })
 }

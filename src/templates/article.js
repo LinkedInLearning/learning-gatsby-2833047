@@ -1,5 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
+import _ from "lodash"
 
 import Layout from "../components/layout"
 import style from "./article.module.css"
@@ -48,7 +50,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
