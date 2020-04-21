@@ -13,11 +13,17 @@ const ConditionalWrapper = ({ condition, wrapper, children }) =>
 
 const ArticleIndex = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
+  const { subject } = pageContext
+
+  let pageHeader = `Articles`
+  if (subject) {
+    pageHeader = `Filed under ${subject}:`
+  }
 
   return (
     <Layout>
       <section className={style.articlelist}>
-        <h2>Articles</h2>
+        <h2>{pageHeader}</h2>
         <ul>
           {posts.map(({ node }, index) => (
             <li key={index} className={style.listitem}>
@@ -58,7 +64,6 @@ const ArticleIndex = ({ data, pageContext }) => {
                     index > 0 && ", ",
                     <Link key={index} to={`/subjects/${_.kebabCase(subject)}`}>
                       {subject}
-                      {index}
                     </Link>,
                   ])}
                 </div>
