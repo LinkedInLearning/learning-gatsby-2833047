@@ -1,0 +1,48 @@
+.articlelist {
+  max-width: var(--content-w-regular);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.articlelist h2 {
+  margin-top: 3rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.articlelist ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.article__meta,
+.article__tax {
+  font-family: var(--highlight-font);
+  font-size: 80%;
+}
+
+.listitem {
+  margin: 3rem 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background: white;
+  border-radius: 1rem;
+}
+
+.listitem .featimg {
+  flex: 1 0 30%;
+  margin-left: 2rem;
+}
+
+.listitem .article__title {
+  font-size: 3rem;
+}
+
+.listitem .article__content {
+  margin-top: 1rem;
+}
