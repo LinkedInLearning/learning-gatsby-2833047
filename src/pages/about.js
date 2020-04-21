@@ -4,37 +4,41 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import RobotImage from "../components/robotimage"
-import style from "./events.module.css"
+import style from "./about.module.css"
 
 const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="About this site"
+        title="About the Project"
         description="Information about the site."
         image="/logo.png"
-        pathname="/"
+        pathname="/about"
         // Boolean indicating whether this is an article:
         // article
       />
       <section className={style.wrapper}>
         <Img fluid={data.headerImage.childImageSharp.fluid} alt="Robots" />
         <h1 className={style.heading}>About this site</h1>
-        <RobotImage
-          src={"/images/bubbles-callout.png"}
-          alt={"Bubbles the Robot"}
-        />
-        <RobotImage src={"/images/dolly-callout.png"} alt={"Dolly the Robot"} />
-        <RobotImage
-          src={"/images/eileen-callout.png"}
-          alt={"Eileen the Robot"}
-        />
         <div>
-          <p>This is the first page I've created using Gatsby!</p>
+          <figure className={style.image}>
+            <Img
+              fixed={data.robotImage.childImageSharp.fixed}
+              alt="Eileen the Robot"
+            />
+          </figure>
+
           <p>
-            It was originally based on the Index page, but now it's totally
-            unique!
+            This site was built with Gatsby and patience. Learning Gatsby
+            requires taking the time to fully understand and embrace the
+            principles of React <em>and</em> static site generators.
+          </p>
+          <p>
+            On a macro level, Gatsby combines the best parts from CMSes
+            (templates and object-orientation) with the best parts of React
+            (components) and the best parts of the Old (dare I say "Classic?")
+            Web (DWTs and static sites) to create performant accessible and
+            robust websites for today and for the future.
           </p>
         </div>
       </section>
@@ -52,6 +56,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1184) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    robotImage: file(relativePath: { eq: "bubbles-disc.png" }) {
+      childImageSharp {
+        fixed(width: 300) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

@@ -46,7 +46,34 @@ exports.createResolvers = ({ createResolvers, getNode }) => {
  * Articles
  */
 
-// Markdown items: Create slug and collection nodes based on folder
+// Default subject taxonomy to "random" if no subject provided.
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    "type MarkdownRemark implements Node { frontmatter: Frontmatter }",
+    schema.buildObjectType({
+      name: "Frontmatter",
+      fields: {
+        subject: {
+          type: "[String!]",
+          resolve(source, args, context, info) {
+            const { subject } = source
+            if (
+              source.subject == null ||
+              (Array.isArray(subject) && !subject.length)
+            ) {
+              return ["random"]
+            }
+            return subject
+          },
+        },
+      },
+    }),
+  ]
+  createTypes(typeDefs)
+}
+
+// Markdown items: Create slug nodes based on folder
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `content` })

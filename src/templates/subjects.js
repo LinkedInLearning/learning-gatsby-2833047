@@ -23,6 +23,14 @@ const ArticleIndex = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        title={subject}
+        description="All articles filed under this subject."
+        image="/logo.png"
+        pathname={node.fields.slug}
+        // Boolean indicating whether this is an article:
+        // article
+      />
       <section className={style.articlelist}>
         <h2>{pageHeader}</h2>
         <ul>
