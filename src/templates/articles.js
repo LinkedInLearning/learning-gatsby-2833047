@@ -11,11 +11,11 @@ import Pagination from "../components/pagination"
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children
 
-const ArticleIndex = ({ data, pageContext, location }) => {
+const ArticleIndex = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location}>
+    <Layout>
       <section className={style.articlelist}>
         <h2>Articles</h2>
         <ul>
