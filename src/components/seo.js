@@ -51,7 +51,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta name="twitter:description" content={seo.description} />
             )}
             {seo.image && <meta name="twitter:image" content={seo.image} />}
-            <link rel="canonical" href="http://mysite.com/example" />
+            <link rel="canonical" href={seo.url} />
           </Helmet>
         </>
       )

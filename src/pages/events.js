@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
         title="Events"
         description="Come join us at an event in the future!"
         image="/logo.png"
-        pathname="/"
+        pathname="/events"
         // Boolean indicating whether this is an article:
         // article
       />

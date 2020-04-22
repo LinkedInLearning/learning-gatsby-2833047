@@ -5,6 +5,7 @@ import _ from "lodash"
 
 import style from "./articles.module.css"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Pagination from "../components/pagination"
 
 // Component to place a conditional wrapper around content.
@@ -16,6 +17,14 @@ const ArticleIndex = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        title="Articles"
+        description="All articles published by the Project"
+        image="/logo.png"
+        pathname="/articles"
+        // Boolean indicating whether this is an article:
+        // article
+      />
       <section className={style.articlelist}>
         <h2>Articles</h2>
         <ul>

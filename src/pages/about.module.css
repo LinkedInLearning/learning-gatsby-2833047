@@ -6,4 +6,10 @@
 .heading {
   margin: 2rem 0;
   font-size: 2.6rem;
+  text-align: center;
+}
+
+.image {
+  margin-left: 2rem;
+  float: right;
 }
