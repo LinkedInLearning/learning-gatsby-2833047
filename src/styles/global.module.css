@@ -1,0 +1,24 @@
+:root {
+  /* Fonts */
+  --primary-font: "Amstelvar", serif;
+  --highlight-font: "Recursive", sans-serif;
+
+  /* Colours */
+  --rich-black: hsl(210, 50%, 1%);
+
+  --mod-light: 90%;
+  --mod-medium: 50%;
+  --mod-dark: 20%;
+  --main-bg-light: hsl(183, 42%, var(--mod-light));
+  --main-bg-medium: hsl(183, 42%, var(--mod-medium));
+  --main-bg-dark: hsl(183, 42%, var(--mod-dark));
+
+  /* Sizes and widths */
+  --content-w-wide: 80rem;
+  --content-w-regular: 60rem;
+  --content-w-narrow: 40rem;
+}
+
+@custom-media --viewport-narrow-max (max-width: 40rem);
+@custom-media --viewport-narrow-min (min-width: 40rem);
+@custom-media --viewport-wide (min-width: 60rem);

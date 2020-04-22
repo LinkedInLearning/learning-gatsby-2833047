@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "Amstelvar";
+	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
+	font-style: normal;
+	font-display: swap;
+    src: url("Amstelvar-Roman-VF.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Amstelvar";
+	font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
+	font-style: italic;
+	font-display: swap;
+	src: url("Amstelvar-Italic-VF.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Recursive';
+    font-weight: 300 1000;
+    src: url("recursive-MONO_CASL_wght_slnt_ital--full_gsub--2019_12_17-23_21--subset-GF_latin_basic.woff2") format("woff2");
+}
