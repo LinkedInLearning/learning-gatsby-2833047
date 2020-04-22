@@ -2,25 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-import MainNav from "./mainnav"
-import style from "./header.module.css"
-
-const Header = ({ siteTitle, siteDescription, menuLinks }) => (
-  <header id="site-header" className={style.masthead} role="banner">
-    <div className={style.masthead_info}>
+const Header = ({ siteTitle, siteDescription }) => (
+  <header id="site-header" role="banner">
+    <div>
       <Link to="/">
         <img
           src="/logo.svg"
           width="366"
           height="374"
-          alt={siteTitle}
-          className={style.site_logo}
+          alt=""
         />
-        <div className={style.site_title}>{siteTitle}</div>
-        <div className={style.site_description}>{siteDescription}</div>
+        <div>{siteTitle}</div>
+        <div>{siteDescription}</div>
       </Link>
     </div>
-    <MainNav menuLinks={menuLinks} />
   </header>
 )
 
