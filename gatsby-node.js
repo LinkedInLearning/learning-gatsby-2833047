@@ -78,6 +78,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      taxQuery: allMarkdownRemark {
+        group(field: frontmatter___subject) {
+          nodes {
+            id
+          }
+          fieldValue
+        }
+      }
     }
   `)
   if (queryResult.errors) {
@@ -106,5 +114,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     itemsPerPage: 2, // How many items you want per page
     pathPrefix: "/articles", // Creates pages like `/blog`, `/blog/2`, etc
     component: path.resolve(`./src/templates/articles.js`), // Just like `createPage()`
+  })
+
+  const taxonomies = queryResult.data.taxQuery.group
+  taxonomies.map(({ nodes: nodes, fieldValue: fieldValue }) => {
+    paginate({
+      createPage, // The Gatsby `createPage` function
+      items: nodes, // An array of objects
+      itemsPerPage: 2, // How many items you want per page
+      pathPrefix: `/subjects/${_.kebabCase(fieldValue)}`, // Creates pages like `/blog`, `/blog/2`, etc
+      component: path.resolve(`./src/templates/subjects.js`), // Just like `createPage()`
+      context: { subject: fieldValue },
+    })
   })
 }
