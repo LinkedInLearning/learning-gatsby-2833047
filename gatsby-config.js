@@ -22,5 +22,12 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-css-customs`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/content/images/`,
+      },
+    },
   ],
 }
