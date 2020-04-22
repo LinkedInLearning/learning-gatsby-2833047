@@ -13,11 +13,18 @@ const ConditionalWrapper = ({ condition, wrapper, children }) =>
 
 const ArticleIndex = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
+  const { subject } = pageContext
+  console.log(pageContext)
+
+  let pageHeader = `Articles`
+  if (subject) {
+    pageHeader = `Filed under ${subject}:`
+  }
 
   return (
     <Layout>
       <section className={style.articlelist}>
-        <h2>Articles</h2>
+        <h2>{pageHeader}</h2>
         <ul>
           {posts.map(({ node }, index) => (
             <li key={index} className={style.listitem}>
@@ -78,8 +85,9 @@ const ArticleIndex = ({ data, pageContext }) => {
 export default ArticleIndex
 
 export const query = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query($subject: String!, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
+      filter: { frontmatter: { subject: { in: [$subject] } } }
       sort: { fields: [frontmatter___date], order: DESC }
       skip: $skip
       limit: $limit
