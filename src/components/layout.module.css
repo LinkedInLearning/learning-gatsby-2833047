@@ -1,0 +1,34 @@
+html {
+  font-size: 112.5%; /* 1rem = 18px */
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--main-bg-light);
+  box-sizing: border-box;
+  color: #000;
+  font-family: var(--primary-font);
+  letter-spacing: -0.015em;
+  text-align: left;
+}
+
+p {
+  padding-bottom: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.0415625em;
+  font-weight: 700;
+  line-height: 1.15;
+}

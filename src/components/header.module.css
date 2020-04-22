@@ -1,0 +1,54 @@
+.masthead {
+  padding: 1rem;
+  font-size: 84%;
+  font-family: var(--highlight-font);
+  text-align: center;
+  background-color: white;
+}
+
+.site_logo {
+  margin: 1rem auto;
+  max-width: 6rem;
+}
+
+.masthead_info {
+  color: var(--rich-black);
+}
+
+.masthead_info a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site_title {
+  font-size: 140%;
+}
+
+@media screen and (--viewport-narrow-min) {
+  .masthead {
+    display: flex;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .masthead_info a {
+    display: grid;
+    grid-template-columns: 7rem auto;
+    gap: 0 1rem;
+    align-items: center;
+  }
+
+  .site_logo {
+    grid-row: span 2;
+    margin: inherit;
+  }
+
+  .masthead_info,
+  .navigation {
+    flex: 1 1 50%;
+  }
+
+  .navigation {
+    align-self: center;
+  }
+}
