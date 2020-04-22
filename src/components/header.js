@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
+import MainNav from "./mainnav"
 import style from "./header.module.css"
 
 const Header = ({ siteTitle, siteDescription }) => (
@@ -19,6 +20,7 @@ const Header = ({ siteTitle, siteDescription }) => (
         <div className={style.site_description}>{siteDescription}</div>
       </Link>
     </div>
+    <MainNav />
   </header>
 )
 
