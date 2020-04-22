@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `My First Gatsby Site!`,
+    title: `The Project`,
     titleTemplate: `%s · a starting point`,
     author: {
       name: `Morten Rand-Hendriksen`,
@@ -14,7 +14,7 @@ module.exports = {
     },
     description: `An opinionated starter for Gatsby`,
     url: `https://something.or.other`,
-    logo: `static/logo.png`,
+    logo: `/logo.png`,
     twitter: `mor10`,
     menuLinks: [
       {
