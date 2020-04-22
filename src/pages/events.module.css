@@ -8,8 +8,22 @@
   font-size: 2.6rem;
 }
 
-.image {
-  margin-left: 2rem;
-  float: right;
-  clear: both;
+.events {
+  max-width: var(--content-w-regular);
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.events > div {
+  padding: 2rem 3rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.events__list {
+  list-style-type: none;
 }
