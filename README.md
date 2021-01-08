@@ -1,6 +1,9 @@
 # Learning Gatsby
 This is the repository for the LinkedIn Learning course Learning Gatsby. The full course is available from [LinkedIn Learning](https://www.linkedin.com/learning/learning-gatsby/).
 
+![Learning Gatsby][lil-thumbnail-url] 
+
+
 Gatsby is a modern take on the static site generator. Built on React, it uses GraphQL to extract information from data sources such as WordPress. Learn how to use this flexible JavaScript framework to build performance-focused websites in this course with Morten Rand-Hendriksen. Discover how to get Gatsby up and running and use the starter projects to quickly build out your sites. Find out how to work with Gatsby pages, assets, and components, and style your sites using multiple CSS approaches: standard static style sheets, inline styles, CSS modules, styled components, and more. Plus, learn how to extend Gatsby with plugins, connect to data sources with GraphQL queries, create pages dynamically using transformer plugins and Node.js scripts, and get your Gatsby site ready for production.
 
 ### Learning objectives
@@ -29,3 +32,6 @@ Some branches will have a beginning and an end state. These are marked with the 
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 3. In terminal, navigate to the project folder and run the command `npm install`.
 4. To start developing, run the command `gatsby develop`.
+
+
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2833047/2833047-1591119341211-16x9.jpg
