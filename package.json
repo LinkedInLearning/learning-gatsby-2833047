@@ -11,7 +11,7 @@
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-image": "^3.5.0",
     "gatsby-plugin-css-customs": "^0.4.0",
-    "gatsby-plugin-manifest": "^2.32.13",
+    "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-postcss": "^2.3.13",
     "gatsby-plugin-react-helmet": "^3.10.0",
