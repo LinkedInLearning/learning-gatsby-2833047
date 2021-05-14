@@ -9,7 +9,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.13",
     "gatsby-awesome-pagination": "^0.3.8",
-    "gatsby-image": "^2.11.0",
+    "gatsby-image": "^3.5.0",
     "gatsby-plugin-css-customs": "^0.4.0",
     "gatsby-plugin-manifest": "^2.4.36",
     "gatsby-plugin-offline": "^3.2.37",
