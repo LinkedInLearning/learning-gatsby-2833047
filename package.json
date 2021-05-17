@@ -2,7 +2,7 @@
   "name": "gatsby-starter-lil-learning-gatsby",
   "private": true,
   "description": "An opinionated starter for Gatsby",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Morten Rand-Hendriksen, LinkedIn Learning",
   "license": "LinkedIn Learning Exercise Files License Agreement",
   "dependencies": {
