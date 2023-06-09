@@ -7,7 +7,7 @@
   "license": "LinkedIn Learning Exercise Files License Agreement",
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.32.13",
+    "gatsby": "^4.25.7",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-image": "^3.5.0",
     "gatsby-plugin-css-customs": "^0.4.0",
